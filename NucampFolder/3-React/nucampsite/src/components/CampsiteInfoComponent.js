@@ -1,6 +1,20 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React, {Component} from 'react';
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+
+
+class CommentForm extends Component{
+    render(){
+        return(
+            <React.Fragment>
+                <Button outline="fa-lg">
+                    <i className="fa fa-pencil" />
+                    Submit Comment
+                </Button>
+            </React.Fragment>
+        );
+    }
+}
 
     function RenderComments({comments}){
        
@@ -16,6 +30,7 @@ import { Link } from 'react-router-dom';
                             </div>
                         );
                     })}
+                    <CommentForm/>
                </div> 
             );
         }
